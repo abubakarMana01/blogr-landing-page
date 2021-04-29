@@ -1,0 +1,548 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	/* font-family: 'Overpass', sans-serif; */
+	font-family: 'Ubuntu', sans-serif;
+	background-color: rgb(241, 241, 241);
+}
+
+/* Header section */
+header {
+	border-radius: 0 0 0 70px;
+	background-image: linear-gradient(
+			to right bottom,
+			rgba(255, 143, 112, 1),
+			rgba(255, 61, 84, 0.8)
+		),
+		url('../images/bg-pattern-intro.svg');
+	background-repeat: no-repeat;
+	/* background-size: cover; */
+	background-position: center;
+	background-attachment: fixed;
+}
+nav {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 120px;
+	padding: 40px 0;
+	align-items: center;
+}
+.hamburger {
+	display: none;
+}
+nav img {
+	width: fit-content;
+	height: fit-content;
+}
+nav div {
+	display: flex;
+	width: 85%;
+	justify-content: space-between;
+	align-items: center;
+}
+nav .nav-links {
+	display: flex;
+	justify-content: space-between;
+}
+nav .nav-links p {
+	color: whitesmoke;
+	cursor: pointer;
+	font-weight: 500;
+}
+nav .nav-links p img {
+	transition: transform 300ms ease-in-out;
+}
+nav .nav-links p:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+nav .nav-links > li {
+	height: fit-content;
+	margin: auto 0;
+	position: relative;
+}
+nav .nav-links .links-list {
+	background-color: white;
+	padding: 1rem;
+	border-radius: 7px;
+	width: 150px;
+	display: none;
+	position: absolute;
+}
+nav .nav-links .links-list li {
+	padding: 0.7rem 0;
+}
+nav .nav-links .links-list a {
+	color: rgb(31, 31, 31);
+	font-weight: 400;
+	transition: 500ms ease;
+}
+nav .nav-links .links-list a:hover {
+	color: black;
+	font-weight: 600;
+}
+nav .nav-login {
+	display: flex;
+}
+nav li {
+	list-style: none;
+	color: #fff;
+	font-size: 1rem;
+}
+nav li > * {
+	padding: 1rem 0;
+}
+nav .nav-links > li {
+	margin: 0 1rem;
+}
+nav a {
+	text-decoration: none;
+	color: #fff;
+}
+nav .nav-login button {
+	font-family: 'Ubuntu', sans-serif;
+	height: fit-content;
+	width: fit-content;
+	padding: 0.8rem 2rem;
+	border: none;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background-color 300ms ease;
+}
+nav .nav-login .login-button {
+	background-color: transparent;
+	color: white;
+}
+nav .nav-login .sign-up-button {
+	background-color: white;
+	color: hsl(353, 100%, 62%);
+	border-radius: 20px;
+	font-weight: 600;
+}
+nav .nav-login .sign-up-button:hover {
+	background-color: hsl(353, 96%, 68%);
+	color: #fff;
+}
+
+.header-content {
+	text-align: center;
+	color: whitesmoke;
+	font-family: 'Overpass', sans-serif;
+	padding: 40px 0 80px 0;
+}
+.header-content h1 {
+	font-size: 3rem;
+	margin: 10px 0;
+}
+.header-content p {
+	font-size: 1.1rem;
+	margin: 10px 0;
+	font-weight: 400;
+}
+.header-content .content-buttons {
+	margin: 30px 0;
+}
+.header-content button {
+	border: none;
+	font-size: 1rem;
+	cursor: pointer;
+	border-radius: 20px;
+	font-weight: 600;
+	height: fit-content;
+	width: fit-content;
+	padding: 0.8rem 1rem;
+	background-color: #fff;
+	color: hsl(353, 100%, 62%);
+}
+.header-content button:hover {
+	background-color: hsl(353, 96%, 68%);
+	color: whitesmoke;
+}
+.header-content button.learn-more {
+	background-color: transparent;
+	color: whitesmoke;
+	border: 1px solid whitesmoke;
+}
+.header-content button.learn-more:hover {
+	background-color: #fff;
+	color: hsl(353, 100%, 62%);
+}
+
+/* Promo section */
+section.promo {
+	font-family: 'Overpass', sans-serif;
+	padding: 150px 0 0 0;
+}
+section.promo h2 {
+	text-align: center;
+	color: hsl(237, 17%, 21%);
+	font-size: 2.5rem;
+}
+section.promo .promo-content {
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	margin-left: 150px;
+	position: relative;
+	top: -120px;
+}
+.promo-content h3 {
+	font-size: 1.7rem;
+	margin: 2rem 0;
+}
+.promo-content p {
+	font-size: 1rem;
+	margin-bottom: 2rem;
+	max-width: 500px;
+	line-height: 1.8;
+	font-weight: 300;
+}
+.promo .promo-content > * {
+	width: 50%;
+}
+
+/* Benefits section */
+section.benefits {
+	display: flex;
+	color: whitesmoke;
+	background: linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+	height: 350px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0 0 0 70px;
+	background-image: linear-gradient(to right, rgba(44, 45, 63, 0.8), rgba(63, 65, 100)),
+		url('../images/bg-pattern-circles.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-attachment: fixed;
+}
+section.benefits .benefits-content {
+	margin-left: 50px;
+}
+section.benefits h1 {
+	font-size: 2rem;
+	margin: 20px 0;
+	font-weight: 400;
+}
+section.benefits p {
+	max-width: 500px;
+	line-height: 1.8;
+	font-size: 1rem;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+/* Promo section 2 */
+section.promo2 {
+	font-family: 'Overpass', sans-serif;
+	padding: 150px 0 0 0;
+}
+section.promo2 .promo-content {
+	display: flex;
+	align-items: center;
+}
+section.promo2 .promo-content div {
+	width: 100%;
+}
+section.promo2 .promo-content .promo-img {
+	width: 100%;
+}
+section.promo2 .promo-content img {
+	width: 100%;
+	transform: translateX(-160px);
+}
+
+/* mobile menu */
+.mobile-menu {
+	display: none;
+}
+
+/* Footer */
+footer {
+	background-color: hsl(237, 17%, 21%);
+	margin-top: 100px;
+	min-height: 300px;
+	display: flex;
+	justify-content: space-around;
+	padding: 50px 100px;
+	border-radius: 0 100px 0 0;
+}
+footer img {
+	height: fit-content;
+}
+footer li {
+	list-style: none;
+	color: #eee;
+	font-weight: 500;
+	font-size: 1.1rem;
+}
+footer li a {
+	text-decoration: none;
+	color: rgb(212, 212, 212);
+	font-size: 0.9rem;
+}
+footer li a:hover {
+	text-decoration: underline;
+	color: #fff;
+}
+
+footer ul li ul {
+	position: absolute;
+	margin-top: 20px;
+}
+
+footer ul li ul li {
+	padding: 0.5rem 0;
+}
+
+@media only screen and (max-width: 1020px) {
+	nav {
+		display: flex;
+		justify-content: space-between;
+		margin: 0;
+		padding: 40px 0;
+		align-items: center;
+		max-width: 100%;
+		position: relative;
+	}
+	.hamburger {
+		display: block;
+		width: fit-content;
+		cursor: pointer;
+	}
+	.mobile-menu {
+		display: block;
+		position: absolute;
+		background-color: #fff;
+		width: 100%;
+		top: 5rem;
+		border-radius: 10px;
+		transition: transform 200ms ease;
+		transform-origin: top;
+		transform: scale(0);
+		padding: 2rem 0;
+	}
+	.mobile-menu li {
+		color: #000;
+		text-align: center;
+		font-size: 1.3rem;
+	}
+	.mobile-menu li li {
+		padding: 10px 0;
+	}
+	.mobile-menu p {
+		cursor: pointer;
+		color: rgb(97, 97, 97);
+		transition: text-decoration 200ms ease;
+	}
+	.mobile-menu p:hover {
+		text-decoration: underline;
+	}
+	.mobile-menu a {
+		color: rgb(97, 97, 97);
+		transition: text-decoration 200ms ease;
+		text-align: center;
+		font-size: 1.1rem;
+	}
+	.mobile-menu a:hover {
+		color: #000;
+		text-decoration: underline;
+	}
+	.mobile-menu .links-list {
+		display: none;
+		background-color: #eee;
+		max-width: 250px;
+		margin: auto;
+		padding: 1rem 0;
+		border-radius: 10px;
+	}
+
+	nav button {
+		font-family: 'Ubuntu', sans-serif;
+		height: fit-content;
+		width: fit-content;
+		padding: 0.6rem 1rem;
+		border: none;
+		font-size: 1.3rem;
+		cursor: pointer;
+		transition: background-color 300ms ease;
+		display: block;
+		margin: 1rem auto;
+	}
+	nav .login-button {
+		background-color: transparent;
+		color: #000;
+	}
+	nav .sign-up-button {
+		background-color: hsl(353, 100%, 62%);
+		color: whitesmoke;
+		border-radius: 20px;
+		font-weight: 600;
+	}
+	nav .sign-up-button:hover {
+		background-color: hsl(353, 96%, 68%);
+		color: #fff;
+	}
+
+	nav {
+		margin-left: 2rem;
+		margin-right: 2rem;
+		padding: 2rem 0;
+	}
+	nav div {
+		display: none;
+	}
+	.header-content h1 {
+		font-size: 2.5rem;
+	}
+
+	.header-content {
+		padding: 2rem;
+	}
+
+	section.promo {
+		font-family: 'Overpass', sans-serif;
+		padding: 4rem 0 200px 0;
+	}
+	section.promo h2 {
+		font-size: 1.8rem;
+	}
+	section.promo .promo-content {
+		overflow: hidden;
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		margin: 0;
+		position: relative;
+		top: 0;
+		padding: 0 0.5rem;
+	}
+	section.promo .promo-content img {
+		width: 100%;
+		margin: 2rem 0;
+	}
+	.promo .promo-content > * {
+		width: 100%;
+	}
+	.promo-content h3 {
+		font-size: 1.4rem;
+		margin: 2rem 0;
+		text-align: center;
+	}
+	.promo-content p {
+		font-size: 1rem;
+		max-width: auto;
+		text-align: center;
+		margin: auto;
+		margin-bottom: 2rem;
+	}
+
+	section.benefits {
+		display: flex;
+		flex-direction: column;
+		color: whitesmoke;
+		background: linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+		height: fit-content;
+		align-items: center;
+		justify-content: center;
+	}
+	section.benefits .benefits-content {
+		margin: 0 2rem;
+	}
+	section.benefits h1 {
+		text-align: center;
+		font-size: 2rem;
+		margin: 20px 0;
+		font-weight: 400;
+	}
+	section.benefits p {
+		text-align: center;
+		max-width: auto;
+		font-size: 0.9rem;
+		margin: auto;
+		color: rgba(255, 255, 255, 0.8);
+		line-height: 2.3;
+	}
+	section.benefits .phones-img {
+		width: 100%;
+		transform: translateY(-40%);
+	}
+	section.benefits img {
+		width: 100%;
+	}
+	section.benefits .benefits-content {
+		transform: translateY(-200px);
+	}
+
+	section.promo2 {
+		padding: 50px 2rem;
+	}
+	section.promo2 .promo-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	section.promo2 .promo-content img {
+		transform: translateX(0);
+	}
+
+	footer {
+		margin-top: 50px;
+		min-height: 800px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 4rem 0 0 0;
+		border-radius: 0 100px 0 0;
+	}
+	footer img {
+		width: fit-content;
+		display: block;
+		margin: 0 auto 3rem auto;
+	}
+	footer li {
+		list-style: none;
+		color: #eee;
+		font-weight: 500;
+		font-size: 1.2rem;
+		text-align: center;
+	}
+	footer > ul > li {
+		margin-bottom: 2rem;
+	}
+	footer li a {
+		text-decoration: none;
+		color: rgb(212, 212, 212);
+		font-size: 1rem;
+	}
+	footer li a:hover {
+		text-decoration: underline;
+		color: #fff;
+	}
+
+	footer ul li ul {
+		position: relative;
+		margin-top: 20px;
+	}
+
+	footer ul li ul li {
+		padding: 0.3rem 0;
+	}
+}
+
+@media only screen and (min-width: 460px) {
+	section.promo {
+		padding: 150px 0 370px 0;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	section.promo {
+		padding: 150px 0 50px 0;
+	}
+}
